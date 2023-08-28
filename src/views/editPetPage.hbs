@@ -1,0 +1,31 @@
+{{#with foundPet}}
+<h1>Edit Pet</h1>
+
+<div class="mb-3">
+    <form class="addEditForm" action="/pets/edit/{{petId}}" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name: </label>
+            <input type="text" class="form-control" name="name" value="{{name}}" />
+        </div>
+        <div class="mb-3">
+            <label for="species" class="form-label">Species: </label>
+            <input type="text" class="form-control" name="species" value="{{species}}" />
+        </div>
+        <div class="mb-3">
+            <label for="imgUrl" class="form-label">Image URL: </label>
+            <input type="text" class="form-control" name="imgUrl" value="{{imgUrl}}" />
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description: </label>
+            <input class="form-control" type="text" name="description" value="{{description}}" />
+        </div>
+        <button class="btn btn-primary submitBtn" type="submit">Submit</button>
+    </form>
+</div>
+
+    <form action="/pets/delete/{{petId}}" method="post">
+        <button class="btn btn-link link" type="submit">Delete</button>
+    </form>
+    <a class="btn btn-link link" href="/pets/">Go to Pet List</a>
+    <a class="btn btn-link link" href="/pets/{{petId}}">Go to Pet Details</a>
+{{/with}}

@@ -1,0 +1,23 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: darkkhaki;
+  }
+
+  label {
+    /* color: blue; */
+    font-size: large;
+  }
+
+  .addEditForm {
+    border: 3px, double, darkred;
+
+  }
+  
+  .submitBtn {
+    margin: 10px;
+  }
+
+  .link {
+    color: #03719c;
+  }

@@ -1,0 +1,24 @@
+{{#with foundPet}}
+<div class="card mb-3 text-dark bg-light border-dark" style="max-width: 750px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{imgUrl}}" alt="{{name}}" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">{{species}}</p>
+                <p class="card-text">{{description}}</p>
+                <form action="/pets/delete/{{petId}}" method="post">
+                    <a class="btn btn-link link" href="/pets/edit/{{petId}}">Edit Details</a>
+                    <button type="submit" class="btn btn-link link">Delete</button>
+                </form>
+            </div>
+        </div>
+        <div class="card-footer card-text">Last updated {{updatedOn}}</div>
+    </div>
+</div>
+
+<a class="btn btn-link link" href="/pets/">Go Back</a>
+
+{{/with}}
